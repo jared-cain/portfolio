@@ -1,0 +1,19 @@
+{
+  "name": "@jcain7/portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "portfolio",
+    "full",
+    "stack",
+    "developer"
+  ],
+  "author": "jcain7",
+  "license": "MIT"
+}
