@@ -9,6 +9,17 @@ module.exports = function(grunt) {
                 }
             }
         },
+        cssmin: {
+            options: {
+                shorthandCompacting: false,
+                roundingPrecision: -1
+            },
+            target: {
+                files: {
+                    "public/css/style.css": ["css/*.css", "css/!*bootstrap.css", "font-awesome/css/*.min.css"]
+                }
+            }
+        }
         autoprefixer: {
             single_file: {
                 src: "public/css/style.css",
@@ -19,9 +30,10 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks("grunt-contrib-less");
+    grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-autoprefixer");
 
-    grunt.registerTask("css", ["less", "autoprefixer"]);
+    grunt.registerTask("css", ["less", "cssmin" "autoprefixer"]);
 
     grunt.registerTask("default", ["css"]);
 
