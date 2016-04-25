@@ -2,6 +2,15 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+        jshint: {
+            files: ["*.js"],
+            options: {
+                esnext: true,
+                globals: {
+                    jQuery: true
+                }
+            }
+        },
         less: {
             production: {
                 files: {
@@ -29,12 +38,13 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-autoprefixer");
 
     grunt.registerTask("css", ["less", "cssmin", "autoprefixer"]);
 
-    grunt.registerTask("default", ["css"]);
+    grunt.registerTask("default", ["jshint", "css"]);
 
 };
