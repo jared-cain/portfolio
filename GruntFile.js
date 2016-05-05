@@ -34,7 +34,13 @@ module.exports = function(grunt) {
                 src: "public/css/style.css",
                 dest: "public/css/style.css"
             }
-        }
+        },
+        browserify: {
+			client: {
+				src: ["app-client.js"],
+				dest: "public/js/bundle.js"
+			}
+		}
 
     });
 
@@ -42,9 +48,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-less");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-autoprefixer");
+    grunt.loadNpmTasks("grunt-browserify");
 
     grunt.registerTask("css", ["less", "cssmin", "autoprefixer"]);
+    grunt.registerTask("js", ["browserify"]);
 
-    grunt.registerTask("default", ["jshint", "css"]);
+    grunt.registerTask("default", ["jshint", "css", "js"]);
 
 };
