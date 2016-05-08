@@ -6,7 +6,7 @@ require('bootstrap/dist/js/bootstrap');
 require('jquery-easing');
 
 // WOW cloned from 'amd' branch of wowjs
-var WOW = require('./js/WOW/dist/wow.js');
+var WOW = require('./node_modules/WOW/dist/wow.js');
 
 $(document).ready(function(){
     $('a.page-scroll').bind('click', function(event) {
