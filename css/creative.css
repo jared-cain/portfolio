@@ -72,6 +72,10 @@ aside {
     padding: 50px 0;
 }
 
+.contact-message {
+    resize: none;
+}
+
 .no-padding {
     padding: 0;
 }

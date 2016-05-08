@@ -5,6 +5,9 @@ window.jQuery = $ = require('jquery');
 require('bootstrap/dist/js/bootstrap');
 require('jquery-easing');
 
+// WOW cloned from 'amd' branch of wowjs
+var WOW = require('./js/WOW/dist/wow.js');
+
 $(document).ready(function(){
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
@@ -29,5 +32,6 @@ $(document).ready(function(){
         }
     });
 
+    new WOW().init();
 
 });
