@@ -45,4 +45,34 @@
     // Initialize WOW.js Scrolling Animations
     new WOW().init();
 
+    function createEmail() {
+        console.log("Email started");
+        $.ajax({
+            url: "/contact-form",
+            type: "POST",
+            data: {
+                contact_name : $(".contact-name").val(),
+                contact_email: $(".contact-email").val(),
+                contact_message: $(".contact-message").val()
+            },
+            error: function(xhr, textStatus, errorThrown){
+                console.log(xhr.status + ": " + xhr.responseText + " " + textStatus + " " + errorThrown);
+            },
+            success: function( json, textStatus,xhr) {
+
+                console.log(json.result);
+
+                alert(`Thank you ${json.name}! We will respond shortly`)!
+
+
+            }
+        });
+    }
+
+    $('.contact-form').on('submit', function(event){
+        event.preventDefault();
+        console.log("Contact form submitted");
+        createEmail();
+    })
+
 })(jQuery); // End of use strict

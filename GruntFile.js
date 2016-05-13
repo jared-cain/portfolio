@@ -25,7 +25,7 @@ module.exports = function(grunt) {
             },
             target: {
                 files: {
-                    "public/css/style.css": ["css/*.css", "css/!*bootstrap.css", "font-awesome/css/*.min.css"]
+                    "public/css/style.css": ["css/*.css", "css/!*bootstrap.css", "font-awesome/css/*.min.css", "node_modules/node-snackbar/dist/snackbar.min.css"]
                 }
             }
         },

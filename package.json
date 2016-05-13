@@ -6,6 +6,7 @@
   "scripts": {
     "predev": "grunt css & grunt js",
     "dev": "node index",
+    "js": "grunt js & node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,6 +20,7 @@
   "author": "jcain7",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "wowjs": "^1.1.3"
   },
