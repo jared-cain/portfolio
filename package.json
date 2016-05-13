@@ -22,6 +22,7 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
+    "nodemailer": "^2.4.1",
     "wowjs": "^1.1.3"
   },
   "devDependencies": {

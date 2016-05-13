@@ -49,8 +49,6 @@ $(document).ready(function(){
             console.log("success! : " + textStatus + ' ' + data.message);
 
             // WRITE SUCCESSFUL EMAIL LOGIC
-            // CLEAR VALUES IN FORM
-            // ANIMATE COOL POPOVER WITH SUCCESS MSG
             document.getElementById("contact-form").reset();
 
             SnackBar.show({
@@ -59,14 +57,24 @@ $(document).ready(function(){
                 pos: "bottom-right",
                 actionText: "Thanks!",
                 actionTextColor: "#f05f40",
-                backgroundColor: "#222",
-                duration: 800
+                backgroundColor: "#333",
+                duration: 1500
              });
 
             console.log("Success finished!");
 
         }).fail(function (jqXHR, textStatus, errorThrown) {
-            alert('Fail!');
+            console.log(`Failed! At : ${textStatus}, ${errorThrown}, ${jqXHR}`);
+
+            SnackBar.show({
+                text: `${textStatus.toUpperCase()}! ${errorThrown}! Please try again later!`,
+                textColor: "#f05f40",
+                pos: "bottom-right",
+                actionText: "Thanks!",
+                actionTextColor: "#f05f40",
+                backgroundColor: "#333",
+                duration: 1500
+             });
         });
     })
 
