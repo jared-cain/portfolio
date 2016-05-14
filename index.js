@@ -3,8 +3,8 @@ var express = require('express');
 var app = express();
 
 var bodyParser = require('body-parser');
-
 var nodemailer = require('nodemailer');
+var validator = require('validator');
 
 app.use(bodyParser.json());
 
@@ -19,12 +19,15 @@ app.use(express.static("./public"));
 
 app.post("/contact_email", function (req, res) {
     console.log("Email started....");
-    var name = req.body.contact_name;
+    var name = validator.escape(req.body.contact_name.trim());
+    var fromEmail = validator.normalizeEmail(req.body.contact_email.trim());
+    var text = validator.escape(req.body.contact_message.trim());
 
-    // WRITE LOGIC FOR SENDING EMAIL
-    // VALIDATE EMAIL ADDRESS, NAME, AND MESSAGE
+    console.log(typeof name);
+    console.log(typeof text);
+
+    // VALIDATE EMAIL ADDRESS, NAME,
     // ADD TO EMAILED DB
-    // SEND EMAIL LOGIC
 
     var transporter = nodemailer.createTransport({
         service: "Gmail",
@@ -34,8 +37,6 @@ app.post("/contact_email", function (req, res) {
         }
     });
 
-    var text = req.body.contact_message;
-    var fromEmail = req.body.contact_email;
 
     var mailOptions = {
         from: fromEmail,
