@@ -8,10 +8,13 @@
 .avatar-container {
     padding-top: 75px;
 }
+
+
 .avatar {
     display: inline-block;
     position: relative;
 }
+
 .avatar img {
     width: 150px;
     height: 150px;
@@ -22,9 +25,16 @@
     transition: 0.3s;
     cursor: pointer;
 }
-.avatar img:hover {
-    border: 5px solid rgba(90,96,200,0.8);
+
+.avatar p {
+    margin-top: 10px;
+    font-size: 20px;
 }
+
+.avatar img:hover {
+    border: 5px solid rgba(240,95,64,0.8);
+}
+/*rgba(90,96,200,0.8)*/
 .avatar-blur {
     /*z-index: -2;*/
     position: absolute;
