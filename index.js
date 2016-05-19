@@ -33,7 +33,7 @@ app.post("/contact_email", function (req, res) {
         service: "Gmail",
         auth: {
             user: 'hotmale776@gmail.com',
-            pass: 'wzziwrwidhagtper'
+            pass: process.env.GPASS
         }
     });
 
@@ -59,6 +59,6 @@ app.post("/contact_email", function (req, res) {
 
 })
 
-app.listen(3000);
+app.listen(process.env.PORT);
 
-console.log("Express app running on port 3000");
+console.log(`Express app running on port ${process.env.PORT}`);
