@@ -77,6 +77,10 @@ aside {
     padding: 50px 0;
 }
 
+#about {
+    padding: 0px 0px 50px 0px;
+}
+
 .contact-message {
     resize: none;
 }

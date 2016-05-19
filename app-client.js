@@ -4,6 +4,7 @@
 window.jQuery = $ = require('jquery');
 require('bootstrap/dist/js/bootstrap');
 require('jquery-easing');
+require('./js/avatarSection');
 var SnackBar = require('node-snackbar/dist/snackbar');
 
 // WOW cloned from 'amd' branch of wowjs

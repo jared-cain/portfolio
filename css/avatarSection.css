@@ -1,0 +1,39 @@
+.avatar-holder {
+    overflow: hidden;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 0 50px 0;
+}
+.avatar-container {
+    padding-top: 50px;
+}
+.avatar {
+    display: inline-block;
+    position: relative;
+}
+.avatar img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.8);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.avatar img:hover {
+    border: 5px solid rgba(90,96,200,0.8);
+}
+.avatar-blur {
+    /*z-index: -2;*/
+    position: absolute;
+    min-height: 100%;
+    height: auto;
+    display: block;
+    top: 0;
+    max-height: none;
+    /* Add this CSS to remove transparent border around the image */
+    left: -10%;
+    width: 120%;
+}
