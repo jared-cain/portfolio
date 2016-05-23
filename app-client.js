@@ -3,7 +3,7 @@
 
 window.jQuery = $ = require('jquery');
 require('bootstrap/dist/js/bootstrap');
-require('jquery-easing');
+require('./js/jquery.easing.min');
 require('./js/avatarSection');
 var SnackBar = require('node-snackbar/dist/snackbar');
 
@@ -59,7 +59,7 @@ $(document).ready(function(){
                 actionText: "Thanks!",
                 actionTextColor: "#f05f40",
                 backgroundColor: "#333",
-                duration: 1500
+                duration: 1100
              });
 
             console.log("Success finished!");
@@ -77,6 +77,14 @@ $(document).ready(function(){
                 duration: 1500
              });
         });
+    });
+
+    $('.social-hide').on('click', function(e){
+        e.preventDefault();
+        $('.container-social-icons').toggle({
+            duration: 800,
+            easing: 'easeInOutExpo'
+        })
     })
 
 });

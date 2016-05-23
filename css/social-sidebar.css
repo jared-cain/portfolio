@@ -12,6 +12,14 @@
 	color: #fff;
 }
 
+.social-hide {
+	font-size: 1.7em;
+	font-weight: bolder;
+	color: white;
+	animation-duration: 4s;
+	animation-delay: 1s;
+}
+
 i::before {
     margin-left: -7px;
 }
