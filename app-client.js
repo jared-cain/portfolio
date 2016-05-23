@@ -81,9 +81,17 @@ $(document).ready(function(){
 
     $('.social-hide-a').on('click', function(e){
         e.preventDefault();
+        // $('.roro').css({'transform': 'rotate(180deg)'});
         $('ul.social-icons').toggle({
             duration: 800,
-            easing: 'easeInOutExpo'
+            easing: 'easeInOutExpo',
+            complete: function(){
+                if($('.roro').css('transform') == 'none'){
+                    $('.roro').css({'transform': 'rotate(180deg)'});
+                } else {
+                    $('.roro').css({'transform': ''});
+                }
+            }
         })
     })
 
