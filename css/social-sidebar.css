@@ -26,13 +26,9 @@
 }
 
 .roro {
-	transition: transform 0.8s;
+	transition: transform 0.3s;
 	float: right;
 }
-
-/*.social-hide-a{
-	transition: transform 2s;
-}*/
 
 i::before {
     margin-left: -7px;
