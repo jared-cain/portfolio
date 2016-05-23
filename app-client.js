@@ -79,9 +79,9 @@ $(document).ready(function(){
         });
     });
 
-    $('.social-hide').on('click', function(e){
+    $('.social-hide-a').on('click', function(e){
         e.preventDefault();
-        $('.container-social-icons').toggle({
+        $('ul.social-icons').toggle({
             duration: 800,
             easing: 'easeInOutExpo'
         })
