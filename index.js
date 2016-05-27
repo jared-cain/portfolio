@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 
 var contactEmail = require('./js/contactEmail');
 
+var port = process.env.PORT || 3000;
+
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -23,6 +25,6 @@ app.post("/contact_email", function(req,res){
     contactEmail.contactEmail(req,res);
 });
 
-app.listen(process.env.PORT);
+app.listen(port);
 
-console.log(`Express app running on port ${process.env.PORT}`);
+console.log(`Express app running on port ${port}`);
