@@ -8,7 +8,7 @@
     "dev": "node index",
     "js": "grunt js & node index",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run dev & node index.js"
+    "start": "npm run dev"
   },
   "keywords": [
     "node",
