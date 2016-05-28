@@ -1,6 +1,9 @@
 {
   "name": "@jcain7/portfolio",
   "version": "1.0.0",
+  "engines": {
+    "node": "4.3.1"  
+  },
   "description": "My personal portfolio primarily showcasing javascript skills",
   "main": "index.js",
   "scripts": {

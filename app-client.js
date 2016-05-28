@@ -8,7 +8,7 @@ require('./js/avatarSection');
 var SnackBar = require('node-snackbar/dist/snackbar');
 
 // WOW cloned from 'amd' branch of wowjs
-var WOW = require('./node_modules/WOW/dist/wow.js');
+var WOW = require('./node_modules/WOW/dist/wow');
 
 $(document).ready(function(){
     $('a.page-scroll').bind('click', function(event) {
