@@ -55,4 +55,6 @@ module.exports = function(grunt) {
 
     grunt.registerTask("default", ["jshint", "css", "js"]);
 
+    grunt.registerTask("heroku", ["css", "js"]);
+
 };
