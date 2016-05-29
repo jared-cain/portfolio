@@ -79,7 +79,7 @@ $(document).ready(function(){
         });
     });
 
-    $('.social-hide-a').bind('click', function(event){
+    $('.social-hide-a > i').bind('click', function(event){
         // $('.roro').css({'transform': 'rotate(180deg)'});
         $('ul.social-icons').toggle({
             duration: 800,
