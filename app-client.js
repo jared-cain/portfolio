@@ -80,7 +80,6 @@ $(document).ready(function(){
     });
 
     $('.social-hide-a').bind('click', function(event){
-        event.preventDefault();
         // $('.roro').css({'transform': 'rotate(180deg)'});
         $('ul.social-icons').toggle({
             duration: 800,
@@ -93,6 +92,7 @@ $(document).ready(function(){
                 }
             }
         });
+        event.preventDefault();
     });
 
 });
