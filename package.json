@@ -11,7 +11,7 @@
     "dev": "node index",
     "js": "grunt js & node index",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "grunt heroku",
+    "postinstall": "grunt heroku --force",
     "start": "node index.js"
   },
   "keywords": [
