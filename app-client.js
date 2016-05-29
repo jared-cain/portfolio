@@ -8,7 +8,7 @@ require('./js/avatarSection');
 var SnackBar = require('node-snackbar/dist/snackbar');
 
 // WOW cloned from 'amd' branch of wowjs
-var WOW = require('./node_modules/wowjs/dist/wow.js');
+require('./node_modules/wowjs/dist/wow.js');
 
 $(document).ready(function(){
     $('a.page-scroll').bind('click', function(event) {
@@ -79,8 +79,8 @@ $(document).ready(function(){
         });
     });
 
-    $('.social-hide-a').on('click', function(e){
-        e.preventDefault();
+    $('.social-hide-a').on('click', function(event){
+        event.preventDefault();
         // $('.roro').css({'transform': 'rotate(180deg)'});
         $('ul.social-icons').toggle({
             duration: 800,
