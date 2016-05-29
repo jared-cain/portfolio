@@ -79,7 +79,7 @@ $(document).ready(function(){
         });
     });
 
-    $('.social-hide-a').on('click', function(event){
+    $('.social-hide-a').bind('click', function(event){
         event.preventDefault();
         // $('.roro').css({'transform': 'rotate(180deg)'});
         $('ul.social-icons').toggle({
@@ -92,8 +92,8 @@ $(document).ready(function(){
                     $('.roro').css({'transform': ''});
                 }
             }
-        })
-    })
+        });
+    });
 
 });
 
