@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 
+
     grunt.initConfig({
 
         jshint: {
@@ -40,7 +41,19 @@ module.exports = function(grunt) {
 				src: ["app-client.js"],
 				dest: "public/js/bundle.js"
 			}
-		}
+		},
+        imagemin: {
+            dynamic: {
+                options: {
+                    optimizationLevel: 4,
+                },
+                files: [{
+                    expand: true,
+                    src: ['img/**/*.jpg', 'img/*.jpg'],
+                    dest: 'public/'
+                }]
+            }
+        }
 
     });
 
@@ -49,12 +62,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-autoprefixer");
     grunt.loadNpmTasks("grunt-browserify");
+    grunt.loadNpmTasks("grunt-contrib-imagemin");
 
     grunt.registerTask("css", ["less", "cssmin", "autoprefixer"]);
     grunt.registerTask("js", ["browserify"]);
 
     grunt.registerTask("default", ["jshint", "css", "js"]);
 
-    grunt.registerTask("heroku", ["css", "js"]);
+    grunt.registerTask("heroku", ["css", "js", "imagemin"]);
 
 };
