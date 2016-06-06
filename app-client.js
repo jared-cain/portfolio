@@ -73,9 +73,9 @@ $(document).ready(function(){
                 textColor: "#f05f40",
                 pos: "bottom-right",
                 actionText: "Thanks!",
-                actionTextColor: "#f05f40",
+                actionTextColor: "#fff",
                 backgroundColor: "#333",
-                duration: 1100
+                duration: 1500
              });
 
             console.log("Success finished!");
@@ -84,11 +84,11 @@ $(document).ready(function(){
             console.log(`Failed! At : ${textStatus}, ${errorThrown}, ${jqXHR}`);
 
             SnackBar.show({
-                text: `${textStatus.toUpperCase()}! ${errorThrown}! Please try again later!`,
+                text: "Oops...we're sorry! Please try again in a few minutes",
                 textColor: "#f05f40",
                 pos: "bottom-right",
                 actionText: "Thanks!",
-                actionTextColor: "#f05f40",
+                actionTextColor: "#fff",
                 backgroundColor: "#333",
                 duration: 1500
              });
