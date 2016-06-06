@@ -2,6 +2,7 @@
 // window.$ = $
 
 window.jQuery = $ = require('jquery');
+require('jquery-ui');
 require('bootstrap/dist/js/bootstrap');
 require('./js/jquery.easing.min');
 require('./js/avatarSection');
@@ -31,7 +32,10 @@ $(document).ready(function(){
                 // } else {
                 //     $('.roro').css({'transform': ''});
                 // }
-                $('.roro').hide();
+                $('.roro').hide('slide', {
+                    direction: "left",
+                    easing: "easeOutBounce"
+                }, 800, function() { console.log("Roro hid.")});
                 setTimeout(function(){
                     var shide = $('.social-hide');
                     if (shide.hasClass('fa-angle-double-left')) {
@@ -41,7 +45,10 @@ $(document).ready(function(){
                         shide.removeClass('fa-angle-double-right');
                         shide.addClass('fa-angle-double-left');
                     }
-                    $('.roro').show(600);
+                    $('.roro').show('slide', {
+                        direction: 'right',
+                        easing: "easeOutBounce"
+                    }, 600, function(){ console.log("Roro shown.")});
                 }, 2000);
             }
         });
