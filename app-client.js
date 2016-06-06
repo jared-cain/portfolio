@@ -11,6 +11,7 @@ var SnackBar = require('node-snackbar/dist/snackbar');
 var WOW = require('wow/dist/wow.min');
 
 $(document).ready(function(){
+
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
@@ -20,17 +21,28 @@ $(document).ready(function(){
     });
 
     $('.social-hide-a').on('click', function(event){
-        // $('.roro').css({'transform': 'rotate(180deg)'});
         event.preventDefault();
         $('ul.social-icons').toggle({
             duration: 800,
             easing: 'easeInOutExpo',
             complete: function(){
-                if($('.roro').css('transform') == 'none'){
-                    $('.roro').css({'transform': 'rotate(180deg)'});
-                } else {
-                    $('.roro').css({'transform': ''});
-                }
+                // if($('.roro').css('transform') == 'none'){
+                //     $('.roro').css({'transform': 'rotate(180deg)'});
+                // } else {
+                //     $('.roro').css({'transform': ''});
+                // }
+                $('.roro').hide();
+                setTimeout(function(){
+                    var shide = $('.social-hide');
+                    if (shide.hasClass('fa-angle-double-left')) {
+                        shide.removeClass('fa-angle-double-left');
+                        shide.addClass('fa-angle-double-right')
+                    } else {
+                        shide.removeClass('fa-angle-double-right');
+                        shide.addClass('fa-angle-double-left');
+                    }
+                    $('.roro').show(600);
+                }, 2000);
             }
         });
     });
