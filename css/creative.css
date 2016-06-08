@@ -83,6 +83,10 @@ aside {
     padding: 0px 0px 50px 0px;
 }
 
+.about-container {
+    padding: 50px 0px;
+}
+
 .contact-message {
     resize: none;
 }
