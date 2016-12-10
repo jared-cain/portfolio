@@ -355,6 +355,10 @@ header .header-content .header-content-inner p {
     margin: 0 auto 20px;
 }
 
+.fa-envelope-o:before {
+    margin-left:0px;
+}
+
 .text-primary {
     color: #f05f40;
 }
